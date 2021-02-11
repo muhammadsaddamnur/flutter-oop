@@ -16,21 +16,21 @@ jobs:
     # images.
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-java@v1
-      with:
-        java-version: '12.x'
-    - uses: subosito/flutter-action@v1
-      with:
-        flutter-version: '1.22.4'
-    - run: flutter pub get
+#     - uses: actions/checkout@v2
+#     - uses: actions/setup-java@v1
+#       with:
+#         java-version: '12.x'
+#     - uses: subosito/flutter-action@v1
+#       with:
+#         flutter-version: '1.22.4'
+#     - run: flutter pub get
     # - run: flutter test
-    - run: flutter build apk
+#     - run: flutter build apk
       
     - uses: actions/checkout@master
     - name: send custom message with args
       uses: appleboy/telegram-action@master
       with:
-        to: 'bijilubulet_bot'
+        to: '1168721025'
         token: '1168721025:AAHpHG0E-dYdGyrmJi0md6s0VohQTrPK1rs'
         args: The ${{ github.event_name }} event triggered first step.
